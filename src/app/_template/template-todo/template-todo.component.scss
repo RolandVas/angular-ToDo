@@ -1,0 +1,25 @@
+mat-card {
+    margin-bottom: 16px;
+}
+
+mat-icon {
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+.edit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+mat-card-title.done {
+    opacity: 0.3;
+    text-decoration: line-through;
+}
+
+mat-card-content.done {
+    opacity: 0.3;
+    text-decoration: line-through;
+}

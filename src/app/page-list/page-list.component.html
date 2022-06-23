@@ -1,0 +1,15 @@
+<app-template-header></app-template-header>
+
+<app-template-todo-form></app-template-todo-form>
+
+<div class="list-view">
+    <h4>Offen</h4>
+    <div class="todo-elemente">
+        <app-template-todo [toDo$]="toDo" *ngFor="let toDo of $todos"></app-template-todo>
+    </div>
+    <h4>Fertig</h4>
+    <div class="done-elemente">
+
+    </div>
+
+</div>

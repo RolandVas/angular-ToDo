@@ -1,14 +1,14 @@
 <mat-card >
     <mat-card-title [class.done]="toDo$.status"> <!-- [class.done] fügt die class .done zu wenn der toDo$ status true ist -->
-        Aufgabe Titel
+        {{ toDo$.title }}
     </mat-card-title>
     <mat-card-content [class.done]="toDo$.status"> 
-        Aufgabe beschreibung
+        {{ toDo$.description }}
     </mat-card-content>
 
     <div class="edit">
         <mat-icon (click)="changeCheck($event)">done</mat-icon>
-        <mat-icon>create</mat-icon>
-        <mat-icon>delete</mat-icon>
+        <mat-icon (click)="edit(toDo$)">create</mat-icon>
+        <mat-icon (click)="delete($event)">delete</mat-icon>
     </div>
 </mat-card>

@@ -1,0 +1,14 @@
+<h2>ToDo bearbeiten</h2>
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Aufgabe</mat-label>
+      <input  matInput placeholder="Titel des ToDo-Punktes"  [(ngModel)]="toDo$.title" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Beschreibung</mat-label>
+      <textarea  matInput [(ngModel)]="toDo$.description" [ngModelOptions]="{standalone: true}"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="save()">Speichern</button>
+  </form>

@@ -1,15 +1,15 @@
 <app-template-header></app-template-header>
 
-<app-template-todo-form></app-template-todo-form>
+<app-template-todo-form (ping)="create($event)"></app-template-todo-form>
 
 <div class="list-view">
-    <h4>Offen</h4>
+    <h3>Offen <span>( {{ $todos.length }} )</span> </h3>
     <div class="todo-elemente">
-        <app-template-todo [toDo$]="toDo" *ngFor="let toDo of $todos"></app-template-todo>
+        <app-template-todo (ping)="update($event)" [toDo$]="toDo" *ngFor="let toDo of $todos"></app-template-todo>
     </div>
-    <h4>Fertig</h4>
-    <div class="done-elemente">
-
+    <h3>Fertig <span>( {{ $todosdone.length }} )</span> </h3>
+    <div class="done-elemente" >
+        <app-template-todo (ping)="update($event)" [toDo$]="toDo" *ngFor="let toDo of $todosdone"></app-template-todo>
     </div>
 
 </div>

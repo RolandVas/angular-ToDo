@@ -16,6 +16,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { TodoEditComponent } from './_template/todo-edit/todo-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {MatInputModule} from '@angular/material/input';
     PageListComponent,
     TemplateTodoComponent,
     TemplateTodoFormComponent,
-    TemplateHeaderComponent
+    TemplateHeaderComponent,
+    TodoEditComponent
   ],
   imports: [
     BrowserModule,
